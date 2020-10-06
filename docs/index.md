@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+---
+title: Welcome
+toc: true
+---
 
-You can use the [editor on GitHub](https://github.com/hicops/hicops.github.io/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+![build](https://github.com/hicops/hicops/workflows/build/badge.svg) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]({{ site.baseurl }}/contributing#Contribute) [![pages yes](https://img.shields.io/badge/pages-yes-blue.svg)](https://hicops.github.io) [![GitHub forks](https://img.shields.io/github/forks/hicops/hicops.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/hicops/hicops/network/) [![GitHub stars](https://img.shields.io/github/stars/hicops/hicops.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/hicops/hicops/stargazers/) [![GitHub contributors](https://img.shields.io/github/contributors/hicops/hicops.svg)](https://GitHub.com/hicops/hicops/graphs/contributors/) [![GitHub issues](https://img.shields.io/github/issues/hicops/hicops.svg)](https://GitHub.com/hicops/hicops/issues/) [![Github all releases](https://img.shields.io/github/downloads/hicops/hicops/total.svg)](https://GitHub.com/hicops/hicops/releases/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# About
 
-### Markdown
+HiCOPS is a software framework designed to accelerate database peptide search workflows on HPC environments for large-scale peptide identification from the mass spectrometry (MS/MS) data. The HiCOPS parallel implements many optimization techniques, algorithms for data indexing, processing, analysis and regression, and novel data structures that can be used to develop new database peptide search algorithms or parallelize existing ones.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+HiCOPS has been implemented using C++14, Python 3.7 and Bash. Detailed information about HiCOPS development, upcoming changes will be detailed in [README](https://github.com/hicops/hicops) on GitHub. A high-level graphical abstract of our parallel software framework is shown in the following figure.
 
-```markdown
-Syntax highlighted code block
+![Graphical Abstract]({{ site.baseurl }}/assets/grabs.jpg){: .align-center height="475" }
 
-# Header 1
-## Header 2
-### Header 3
+## Research Work
+Please read the following research paper for extensive introduction to the research work, parallel design and technical concepts behind HiCOPS. A preprint of the paper is available [here]().
 
-- Bulleted
-- List
+*Placeholder for the paper*
 
-1. Numbered
-2. List
+Please cite us if you use our work. Thank you.
 
-**Bold** and _Italic_ and `Code` text
+## Application
+Computational Proteomics researchers and developers can utilize HiCOPS core library to accelerate their worklflows. Integration is as simple as implementing shared-memory versions of database indexing, filtering, peptide-to-spectrum scoring, post-processing etc. algorithms within HiCOPS.
 
-[Link](url) and ![Image](src)
-```
+## Supported Environments
+HiCOPS can seamlessly run on any Linux based personal laptops, desktops, workstations and symmetric multicore multinode (the most common) HPC systems. Sufficient amount of memory resources must be allocated to HiCOPS for database indexing.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Credits
+HiCOPS is being developed by the Parallel Computing and Data Science Laboratory at Florida International University.
 
-### Jekyll Themes
+| Name                  |                                        Affiliation                                        |                    GitHub                     |
+| --------------------- | :---------------------------------------------------------------------------------------: | :-------------------------------------------: |
+| Muhammad Haseeb       |       [FIU](https://tinyurl.com/mhaseeb22)                                                | [mhaseeb123](https://github.com/mhaseeb123)   |
+| Fahad Saeed           |       [FIU](https://saeedlab.cis.fiu.edu)                                                 | [pcdslab](https://github.com/pcdslab)         |
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hicops/hicops.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Contributions
+We welcome contributions via GitHub pull requests. For more information, please refer to [Contributing]({{ site.baseurl }}/contributing) document.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## License
+GPL v3.0 for all academic users. Commercial users may acquire a license from the [FIU Technology Transfer Office](http://research.fiu.edu/ored/)
