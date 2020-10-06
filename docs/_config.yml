@@ -7,6 +7,9 @@ timezone: America/New_York
 plugins:
   - jekyll-toc
 
+# Google Analytics
+google_analytics: UA-179832111-1
+
 page_excerpts: true
 
 # show_downloads: true
