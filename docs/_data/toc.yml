@@ -42,3 +42,6 @@ content2:
 content3:
   - title: Contribute
     url: contributing
+
+  - title: News
+    url: news
