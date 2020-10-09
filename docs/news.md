@@ -7,7 +7,7 @@ title: News
 <!-- TOC -->
 
 - [Upcoming Features](#upcoming-features)
-- [Release News](#release-news)
+- [Updates](#updates)
   - [October 09, 2020](#october-09-2020)
 
 <!-- /TOC -->
@@ -20,7 +20,7 @@ title: News
 * Python interface and bindings.    
 * Support for heterogeneous and CPU/GPU architectures.     
 
-## Release News
+## Updates
 ### October 09, 2020
 HiCOPS release v1.0 planned for end of October. Planned features include:
 
