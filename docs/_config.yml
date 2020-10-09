@@ -7,9 +7,12 @@ timezone: America/New_York
 plugins:
   - jekyll-toc
 
+page_excerpts: true
+
 # Google Analytics
 google_analytics: UA-179832111-1
 
-page_excerpts: true
+# main hicops repository url
+main_repository_url: https://github.com/hicops/hicops
 
 # show_downloads: true
