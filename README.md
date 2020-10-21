@@ -1,6 +1,4 @@
 # The official HiCOPS docs
-
-# HiCOPS Repo
 Please access the HiCOPS code repo [here](https://github.com/hicops/hicops)
 
 # Contribute
