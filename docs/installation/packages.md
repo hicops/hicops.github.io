@@ -11,11 +11,11 @@ Install and load the latest versions of the following packages, preferably throu
 | boost              | cmake             | python        |
 | py-numpy           | py-setuptools-scm | py-kiwisolver |
 | py-python-dateutil | pkgconf           | py-numexpr    |
-| py-setuptools      | py-et-xmlfile     | py-pillow     |
+| py-setuptools      | py-et-xmlfile     | py-matplotlib |
 | py-bottleneck      | papi              | py-jdcal      |
 | py-pyparsing       | py-cython         | py-pandas     |
 | py-subprocess32    | py-cycler         | py-openpyxl   |
-| py-six             | py-argparse       | py-matplotlib |
+| py-six             | py-argparse       |               |
 | py-pytz            | mpich             | python        |
 
 **Note:** You may skip MPI installation if you are running on a cluster system with built-in MPI distribution and simply load that into your environment.
