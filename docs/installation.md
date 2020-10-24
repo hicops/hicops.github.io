@@ -16,10 +16,10 @@ HiCOPS uses a standard CMake installation. Set the environment variables `CC` an
 **Important**: Please make sure that your MPI distribution supports multiple threads (MPI thread multiple) option.
 
 ## Required Packages
-Install all required packages by following the instructions [here]({{ site.baseurl }}/installation/packages#required-packages).
+Install all required packages by following the instructions [here]({{ site.baseurl }}/installation/reqd_packages#required-packages).
 
 ## Instrumentation Support
-Optional: Install Timemory to enable instrumentation by following the instructions [here]({{ site.baseurl }}/installation/packages#optional-packages).
+Optional: Install Timemory to enable instrumentation by following the instructions [here]({{ site.baseurl }}/installation/opt_packages#optional-packages).
 
 ## Install HiCOPS
 Install HiCOPS using Git & CMake using the following steps:

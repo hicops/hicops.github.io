@@ -13,7 +13,9 @@ content2:
     url: installation
     drop:
       - title: Required Packages
-        url: packages
+        url: reqd_packages
+      - title: Optional Packages
+        url: opt_packages
 
   - title: Getting Started
     url: getting_started

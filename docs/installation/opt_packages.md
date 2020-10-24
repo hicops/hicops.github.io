@@ -15,7 +15,7 @@ Install timemory with at least Python, MPI, MPIP, OMPT and PAPI support using th
 
 ```bash
 # install timemory dependencies via Spack
-$ spack install --only dependencies timemory%gcc@<version> +ompt +tools \\
+$ spack install --only dependencies timemory@develop%gcc@<version> +ompt +tools \\
   +ompt_library ~dyninst +gotcha +python +papi \\
   ~caliper +mpi +mpip_library
 
