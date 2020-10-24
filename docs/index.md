@@ -14,11 +14,9 @@ HiCOPS has been implemented using C++14, Python 3.7 and Bash. A high-level graph
 ![Graphical Abstract]({{ site.baseurl }}/assets/grabs.jpg){: .align-center height="475" }
 
 ## Research Work
-Please read the following research paper for extensive introduction to the research work, parallel design and technical concepts behind HiCOPS. A preprint of the paper is available [here]().
+Please read the following research paper for an extensive introduction to the research work, parallel design and technical concepts behind HiCOPS. A pre-print of our paper is available [here](). Please cite us if you use our work. Thank you.
 
-*Placeholder for the paper*
-
-Please cite us if you use our work. Thank you.
+*[TODO] Placeholder for the paper*
 
 ## Application
 Computational Proteomics researchers and developers can utilize HiCOPS core library to accelerate their worklflows. Integration is as simple as implementing shared-memory versions of database indexing, filtering, peptide-to-spectrum scoring, post-processing etc. algorithms within HiCOPS.
