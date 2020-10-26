@@ -33,12 +33,12 @@ HiCOPS currently only supports the `MS2` format for experimental MS/MS data. Ple
 ### Setup Instrumentation
 Optional: If HiCOPS instrumentation was enabled during build, it can be configured and modified using the following environment variables. See how to enable HiCOPS instrumentation in the [Install]({{ site.baseurl }}/installation) document.
 
-| Variable                 | Description                                                                                                                                                                                                              |
-|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `TIMEMORY_ENABLED`       | Enable/disable Timemory instrumentation interface. Set to : ON (default), OFF. Requires => `USE_TIMEMORY=ON` option in [install](https://hicops.github.io/installation#cmake-options) step.          |
-| `HICOPS_MPIP_INSTR`      | Enable MPI data_tracker instrumentation. Set to: ON (default), OFF. Requires => `USE_TIMEMORY=ON` and `USE_MPIP_LIBRARY=ON` options in [install](https://hicops.github.io/installation#cmake-options) step.          |
-| `HICOPS_INST_COMPONENTS` | Append to the instrumentation components. Set as: `HICOPS_INST_COMPONENTS="ci,.."` where `ci` are Timemory components.                                                                                                    |
-| `HICOPS_PAPI_EVENTS`     | Edit the hardware counters that are instrumented. Set as: `HICOPS_PAPI_EVENTS="hi,.."` where `hi` are PAPI counters.                                                                                                      |
+| Variable                 | Description                                                                                                                                                                                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `TIMEMORY_ENABLED`       | Enable/disable Timemory instrumentation interface. Set to : ON (default), OFF. Requires => `USE_TIMEMORY=ON` option in [install]({{ site.baseurl }}/installation#cmake-options) step.              |
+| `HICOPS_MPIP_INSTR`      | Enable MPI data_tracker instrumentation. Set to: ON (default), OFF. Requires => `USE_TIMEMORY=ON` and `USE_MPIP_LIBRARY=ON` options in [install]({{ site.baseurl }}/installation#cmake-options) step. |
+| `HICOPS_INST_COMPONENTS` | Append to the instrumentation components. Set as: `HICOPS_INST_COMPONENTS="ci,.."` where `ci` are Timemory components.                                                                                 |
+| `HICOPS_PAPI_EVENTS`     | Edit the hardware counters that are instrumented. Set as: `HICOPS_PAPI_EVENTS="hi,.."` where `hi` are PAPI counters.                                                                                   |
 
 To list all available timemory components [here](https://timemory.readthedocs.io/en/develop/tools/timemory-avail/README.html?highlight=user_bundle#available-components). By default, the following hardware counters are inserted into the `HICOPS_PAPI_EVENTS`.
 
