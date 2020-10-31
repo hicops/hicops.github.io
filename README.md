@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/14217455/97766105-66d7fd80-1aeb-11eb-9741-9938aec1b8d7.jpg" width="100" valign="middle" alt="HiCOPS"/> HiCOPS Docs
+# <img src="https://user-images.githubusercontent.com/14217455/97767279-84a86100-1af1-11eb-92db-52edf709cb1f.png" width="100" valign="middle" alt="HiCOPS"/> HiCOPS Docs
 Please access the HiCOPS code repo [here](https://github.com/hicops/hicops)
 
 # Contribute
