@@ -76,9 +76,9 @@ static status_t DSLIM_InitializeMS2Data()
 ### Database Search & Scoring
 The database search (scoring) superstep in HiCOPS is implemented through 3 parallel sub-tasks, *R*, *I*, and *K*. The parallel sub-tasks work in a producer consumer model with variable number of parallel threads dynamically managed between them. The sub-tasks *R* and *K* are implemented using `std::thread` while the sub-task *I* has been implemented via OpenMP.
 
-* The sub-task *R* reads the pre-processed experimental data in batches and pushes the batches to a queue *q_f* using the index created earlier.     
-* The sub-task *I* reads extracts a batch from *q_f*, executes the search and ***scoring algorithm*** and produces a batch of intermediate results. The empty data batch is recycled for sub-task *R* using a queue *q_r* and the produced results are queued to sub-task *K* using queue *q_k*.     
-* The sub-task *K* reads a batch of intermediate results and writes them to the shared file-system.
+* The sub-task *R* reads batches of pre-processed experimental data (using the batch index) and queues them into *q_f*.     
+* The sub-task *I* extracts each batch from *q_f*, executes the partial database peptide search producing intermediate results that are queued into *q_k*. The consumed data buffers are recycled to sub-task *R* through *q_r*.     
+* The sub-task *K* reads batches of intermediate results from *q_k* and writes them to the shared memory or file-system. The consumed memory buffers are returned to the sub-task *R* through *q'_k*.
 
 A schematic setup of parallel sub-task setup along with task-scheduling and queues is shown in the following figure. For more details, please refer to the original research paper [here]().
 
