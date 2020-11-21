@@ -21,7 +21,7 @@ Complete the setup steps by following through the instructions in [Getting Start
 ## Run HiCOPS
 Assuming that the HiCOPS has been installed at : `$HICOPS_INSTALL`.
 
-**o.** Are you working on XSEDE Comet system? If no, then follow this [link]({{ site.baseurl }}/getting_started) instead.
+**o.** If you are *not* working on XSEDE Comet system, then follow this [link]({{ site.baseurl }}/getting_started) instead.
 
 **i.** Ensure that the hicops-core library path has been added to `LD_LIBRARY_PATH`.      
 
@@ -51,8 +51,8 @@ $ $HICOPS_INSTALL/bin/tools/hicops_comet sampleparams.txt
 
 ```bash
 # run psm2excel using SLURM
-$ srun --partition=compute  --nodes=1 --ntasks-per-node=1 -t 00:15:00 \\
-  --export=ALL $HICOPS_INSTALL/tools/psm2excel -i \\
+$ srun --partition=compute  --nodes=1 --ntasks-per-node=1 -t 00:15:00 \
+  --export=ALL $HICOPS_INSTALL/tools/psm2excel -i \
   [/path/to/hicops/workspace/output]
 ```
 

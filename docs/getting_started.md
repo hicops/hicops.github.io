@@ -25,7 +25,15 @@ Follow the below steps to get started with HiCOPS:
 Setup the peptide database, experimental MS/MS dataset and HiCOPS instrumentation using the below instructions.
 
 ### Setup Database
-Get the desired protein sequence database from UniProt/Swissprot. Digest the protein sequence database into a peptide sequence database using Digestor tool available with [OpenMS](https://www.openms.de/) or using [ProteoWizard](http://proteowizard.sourceforge.net/). Make sure that the generated peptide sequence database is in FASTA format. Use the `db_prep` tool to separate coarse-grained peptide sequence clusters. This tool will generate many files in `./parts/len.pep` directory. Read more about the usage of `db_prep` tool [here]({{ site.baseurl }}/tools/dbtools/dbprep).
+Get the desired protein sequence database from UniProt/Swissprot. Digest the protein sequence database into a peptide sequence database using Digestor tool available with [OpenMS](https://www.openms.de/) or using [Protein Digestion Simulator](https://omics.pnl.gov/software/protein-digestion-simulator). Make sure that the generated peptide sequence database is in FASTA format.  Example commands for the OpenMS Digestor tool:
+
+```bash
+$ Digestor.exe -in <proteome.fasta> -out <digested.fasta> \ 
+-out_type fasta -threads 8 -missed_cleavages 2 -enzyme Trypsin \ 
+-min_length 6 -max_length 46 -FASTA:ID both -FASTA:description remove
+```
+
+Now use the `db_prep` tool to separate coarse-grained peptide sequence clusters. This tool will generate files in `./<output>/<len>.pep` directory. Read more about the usage of `db_prep` tool [here]({{ site.baseurl }}/tools/dbtools/dbprep).
 
 ### Setup MS/MS Dataset
 HiCOPS currently only supports the `MS2` format for experimental MS/MS data. Please convert all experimental MS/MS data files into this format using the `raw2ms2` command line tool available with HiCOPS. Read more about the usage of `raw2ms2` tool [here]({{ site.baseurl }}/tools/ms2prep/raw2ms2).
@@ -43,8 +51,8 @@ Optional: If HiCOPS instrumentation was enabled during build, it can be configur
 To list all available timemory components [here](https://timemory.readthedocs.io/en/develop/tools/timemory-avail/README.html?highlight=user_bundle#available-components). By default, the following hardware counters are inserted into the `HICOPS_PAPI_EVENTS`.
 
 ```bash
-HICOPS_PAPI_EVENTS="PAPI_TOT_INS, PAPI_TOT_CYC, PAPI_L3_TCM, \\
-PAPI_L2_TCA, PAPI_L3_TCA, PAPI_MEM_WCY, PAPI_RES_STL, \\
+HICOPS_PAPI_EVENTS="PAPI_TOT_INS, PAPI_TOT_CYC, PAPI_L3_TCM, \
+PAPI_L2_TCA, PAPI_L3_TCA, PAPI_MEM_WCY, PAPI_RES_STL, \
 PAPI_STL_CCY, PAPI_BR_CN, PAPI_BR_PRC, PAPI_FUL_ICY"
 ``` 
 
@@ -103,11 +111,11 @@ $ $HICOPS_INSTALL/bin/hicops $HICOPS_INSTALL/bin/uparams.txt
 $ srun [OPTIONS] $HICOPS_INSTALL/bin/hicops $HICOPS_INSTALL/bin/uparams.txt
 
 # with MPI
-$ mpirun -np [N] [OPTIONS] $HICOPS_INSTALL/bin/hicops \\
+$ mpirun -np [N] [OPTIONS] $HICOPS_INSTALL/bin/hicops \
   $HICOPS_INSTALL/bin/uparams.txt
 
 # SLURM with MPI
-$ srun [OPTIONS] mpirun -np [N] [OPTIONS] $HICOPS_INSTALL/bin/hicops \\
+$ srun [OPTIONS] mpirun -np [N] [OPTIONS] $HICOPS_INSTALL/bin/hicops \
   $HICOPS_INSTALL/bin/uparams.txt
 ```    
 
@@ -118,7 +126,7 @@ $ srun [OPTIONS] mpirun -np [N] [OPTIONS] $HICOPS_INSTALL/bin/hicops \\
 $ $HICOPS_INSTALL/tools/psm2excel [/path/to/hicops/workspace/output]
 
 # psm2excel with SLURM
-$ srun [OPTIONS] --nodes=1 $HICOPS_INSTALL/tools/psm2excel -i \\
+$ srun [OPTIONS] --nodes=1 $HICOPS_INSTALL/tools/psm2excel -i \
   [/path/to/hicops/workspace/output]
 ```    
 
