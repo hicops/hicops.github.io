@@ -27,7 +27,7 @@ Assuming that the HiCOPS has been installed at : `$HICOPS_INSTALL`.
 
 ```bash
 # append hicops-core lib path to LD_LIBRARY_PATH.
-$ export LD_LIBRARY_PATH=$PWD/../install/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$HICOPS_INSTALL/lib:$LD_LIBRARY_PATH
 ```
 
 **ii.** Generate HiCOPS template runtime parameters file using the `hicops_comet` tool located at `$HICOPS_INSTALL/bin/tools`.       

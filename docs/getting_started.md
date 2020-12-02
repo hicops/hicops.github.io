@@ -74,7 +74,7 @@ Follow the below instructions if you are running on any system but XSEDE Comet.
 
 ```bash
 # append hicops-core lib path to LD_LIBRARY_PATH.
-$ export LD_LIBRARY_PATH=$PWD/../install/lib:$LD_LIBRARY_PATH
+$ export LD_LIBRARY_PATH=$HICOPS_INSTALL/lib:$LD_LIBRARY_PATH
 ```
 
 **ii.** Generate HiCOPS template runtime parameters file using the `hicops_config` tool located at `$HICOPS_INSTALL/bin`.     
