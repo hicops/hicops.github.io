@@ -7,25 +7,25 @@ toc: true
 
 # About
 
-HiCOPS is a software framework designed to accelerate database peptide search workflows on HPC environments for large-scale peptide identification from the mass spectrometry (MS/MS) data. The HiCOPS parallel implements many optimization techniques, algorithms for data indexing, processing, analysis and regression, and novel data structures that can be used to develop new database peptide search algorithms or parallelize existing ones.
+HiCOPS is a software framework designed to accelerate database peptide search workflows on HPC environments for large-scale peptide identification from the mass spectrometry (MS/MS) data. HiCOPS provides many data analysis, curve fitting, and optimization algorithms that can be used to develop new database search pipelines or accelerate the existing ones. 
 
 HiCOPS has been implemented using C++14, Python 3.7 and Bash. A high-level graphical abstract of our parallel software framework is shown in the following figure.
 
 ![Graphical Abstract]({{ site.baseurl }}/assets/grabs.jpg){: .align-center height="475" }
 
 ## Research Work
-Please read the following research paper for an extensive introduction to the research work, parallel design and technical concepts behind HiCOPS. A pre-print of our paper is available [here](). Please cite us if you use our work. Thank you.
+Please read the following research paper for the introduction to our research, parallel design and other concepts behind HiCOPS. A pre-print of our paper is available [here](). Please cite us if you use our work. Thank you.
 
 *[TODO] Placeholder for the paper*
 
 ## Application
-Computational Proteomics researchers and developers can utilize HiCOPS core library to accelerate their worklflows. Integration is as simple as implementing shared-memory versions of database indexing, filtering, peptide-to-spectrum scoring, post-processing etc. algorithms within HiCOPS.
+Computational Proteomics researchers and developers can utilize HiCOPS framework to accelerate their worklflows. Integration is as simple as implementing/integrating shared-memory versions of database indexing, filtering, peptide-to-spectrum scoring, post-processing etc. algorithms within HiCOPS.
 
 ## Supported Environments
-HiCOPS can seamlessly run on any Linux based personal laptops, desktops, workstations and symmetric multicore multinode (the most common) HPC systems. Sufficient amount of memory resources must be allocated to HiCOPS for database indexing.
+HiCOPS can seamlessly run on any Linux based personal laptops, desktops, workstations and symmetric multicore multinode (the most common) HPC systems. Sufficient amount of memory resources must be allocated to HiCOPS to handle the database index.
 
 ## Credits
-HiCOPS is being developed by the Parallel Computing and Data Science Laboratory at Florida International University.
+HiCOPS is under development at the Parallel Computing and Data Science Laboratory at Florida International University.
 
 | Name                  |                                        Affiliation                                        |                    GitHub                     |
 | --------------------- | :---------------------------------------------------------------------------------------: | :-------------------------------------------: |
