@@ -25,7 +25,7 @@ Follow the below steps to get started with HiCOPS:
 Setup the peptide database, experimental MS/MS dataset and HiCOPS instrumentation using the below instructions.
 
 ### Setup Database
-Get the desired protein sequence database from UniProt/Swissprot. Digest the protein sequence database into a peptide sequence database using Digestor tool available with [OpenMS](https://www.openms.de/) or using [Protein Digestion Simulator](https://omics.pnl.gov/software/protein-digestion-simulator). Make sure that the generated peptide sequence database is in FASTA format.  Example commands for the OpenMS Digestor tool:
+Get the desired protein sequence database from UniProt/Swissprot. Digest the protein sequence database into a peptide sequence database using Digestor tool available with [OpenMS](https://www.openms.de/) (preferred) or using [Protein Digestion Simulator](https://omics.pnl.gov/software/protein-digestion-simulator). Make sure that the generated peptide sequence database is in FASTA format.  Example commands for the OpenMS Digestor tool:
 
 ```bash
 $ Digestor.exe -in <proteome.fasta> -out <digested.fasta> \ 
