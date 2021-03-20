@@ -1,0 +1,92 @@
+# 
+# HiCOPS
+# Copyrights(c) 2020 PCDS Laboratory
+# Muhammad Haseeb, and Fahad Saeed
+# School of Computing and Information Sciences
+# Florida International University (FIU), Miami, FL
+# Email: {mhaseeb, fsaeed}@fiu.edu
+# 
+# Auto generated sampleparams.txt
+# Generated on: 2021-03-08 23:02 
+# 
+# IMPORTANT: DO NOT put any spaces between variable=value
+# 
+
+# Path (absolute or relative) to Workspace directory
+workspace=/disk/raptor-2/mhase003/workspace
+
+# Multithreads per MPI process
+cores=24
+
+# ABSOLUTE path to processed proteome database parts
+# NOTE: Run the dbprocessor.py to process a FASTA 
+#       proteome database and generate dbparts
+dbparts=/lclhome/mhase003/Data/Database/Digested/parts
+
+# ABSOLUTE path to MS/MS dataset
+ms2data=/disk/raptor-2/mhase003/datasets/15GDset
+
+# Mods to include per peptide sequence
+nmods=5
+
+# Mods Information: AA(max 4) mod_mass mods_per_pep
+mod1=M 15.99 3
+mod2=NQ 0.98 3
+mod3=X 0 0
+mod4=X 0 0
+mod5=X 0 0
+mod6=X 0 0
+mod7=X 0 0
+mod8=X 0 0
+mod9=X 0 0
+mod10=X 0 0
+mod11=X 0 0
+mod12=X 0 0
+mod13=X 0 0
+mod14=X 0 0
+mod15=X 0 0
+
+# Min peptide length
+min_length=6
+
+# Max peptide length
+max_length=40
+
+# Min precursor mass (Da)
+min_prec_mass=500
+
+# Max precursor mass (Da)
+max_prec_mass=5000
+
+# Max fragment charge
+maxz=3
+
+# Min shared peaks
+shp=4
+
+# Required min shared peaks
+min_hits=4
+
+# Base normalized Intensity for MS/MS data 
+base_int=10000
+
+# Cutoff ratio wrt base intensity 
+cutoff_ratio=0.01
+
+# Scratch pad memory for scorecard in MBs (min: 2048MB)
+spadmem=2048
+
+# Resolution (Da)
+res=0.01
+
+# Precursor Mass Tolerance (+-Da): -1 means infinity 
+dM=203
+
+# Fragment Mass Tolerance (+-Da)
+dF=0.02
+
+# Top Matches to report
+top_matches=10
+
+# Max expect value to report
+expect_max=20.0

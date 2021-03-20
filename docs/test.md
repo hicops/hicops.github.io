@@ -288,6 +288,32 @@ Use this paramters file: [pe5.txt]({{ site.baseurl }}/assets/config_hicops/pe5.t
 
 ## Experiments: Correctness of search algorithm
 
+### <font color=red> Experiment 2 </font>
+* Database: human
+* Dataset: E<sub>4</sub>
+
+#### HiCOPS
+* Use this parameters file: [ce2.txt]({{ site.baseurl }}/assets/config_hicops/ce2.txt)
+* Run [hicops_config]({{ site.baseurl }}/tools/runtime/hicops_config) to generate the uparams.txt as follows:
+
+```bash
+/hicops/install/bin/tools/hicops_config ./ce3.txt
+```
+
+* Run HiCOPS
+
+```bash
+/hicops/install/bin/hicops ./uparams.txt ; /hicops/install/bin/tools/psm2tsv -i /path/to/workspace/output
+```
+
+#### MSFragger
+* Use this parameters file: [ce2.params]({{ site.baseurl }}/assets/config_msf/ce2.params)
+* Run MSFragger
+
+```bash 
+java -Xmx80G -jar /msfragger/MSFragger-2.4.jar ce2.params /path/to/dataset4/*.mzML
+```
+
 ### <font color=red> Experiment 3 </font>
 * Database: swiss
 * Dataset: PXD015890
@@ -307,7 +333,7 @@ Use this paramters file: [pe5.txt]({{ site.baseurl }}/assets/config_hicops/pe5.t
 ```
 
 #### MSFragger
-* Use this parameters file:[ce3.params]({{ site.baseurl }}/assets/config_msf/ce3.params)
+* Use this parameters file: [ce3.params]({{ site.baseurl }}/assets/config_msf/ce3.params)
 * Run MSFragger
 
 ```bash 
