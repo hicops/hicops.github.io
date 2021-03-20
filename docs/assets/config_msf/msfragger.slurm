@@ -13,4 +13,4 @@
 export OMP_NUM_THREADS=24
 
 #Run the job using
-timem java -Xmx90G -jar /home/mhaseeb/MSFragger-3.0/MSFragger-3.0.jar /home/mhaseeb/MSFragger-3.0/large_scale.params $OASIS/mzML15G/*.mzML
+java -Xmx90G -jar /home/mhaseeb/MSFragger-3.0/MSFragger-3.0.jar <path to params> <path to dataset>

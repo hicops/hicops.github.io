@@ -1,8 +1,8 @@
 num_threads = 24                             # Number of CPU threads to use. 
 database_name = /home/mhaseeb/database/swiss/uniprot-reviewed_yes.fasta                  # Path to the protein database file in FASTA format.
 
-precursor_mass_lower = -10                 # Lower bound of the precursor mass window.
-precursor_mass_upper = 10                  # Upper bound of the precursor mass window.
+precursor_mass_lower = -230                 # Lower bound of the precursor mass window.
+precursor_mass_upper = 500                  # Upper bound of the precursor mass window.
 precursor_mass_units = 0                    # Precursor mass tolerance units (0 for Da, 1 for ppm).
 precursor_true_tolerance = 20               # True precursor mass tolerance (window is +/- this value).
 precursor_true_units = 1                    # True precursor mass tolerance units (0 for Da, 1 for ppm).
