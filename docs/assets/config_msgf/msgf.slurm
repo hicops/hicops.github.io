@@ -13,4 +13,4 @@
 export OMP_NUM_THREADS=24
 
 #Run the job using
-timem java -Xmx110G -jar /home/mhaseeb/msgf+/MSGFPlus.jar -conf <path to params.txt>
+java -Xmx110G -jar /home/mhaseeb/msgf+/MSGFPlus.jar -conf <path to params.txt>

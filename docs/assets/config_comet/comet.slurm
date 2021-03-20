@@ -13,4 +13,4 @@
 export OMP_NUM_THREADS=24
 
 #Run the job using
-timem  /home/mhaseeb/comet/comet.2020012.linux.exe -P<path to .params file> <path to the dataset *.mzML>
+/home/mhaseeb/comet/comet.2020012.linux.exe -P<path to .params file> <path to the dataset *.mzML>
