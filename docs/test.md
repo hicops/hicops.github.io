@@ -17,7 +17,8 @@ The details, links and files provided in the following subsections can be used t
 * E<sub>1</sub> = [PXD009072](http://ftp.pride.ebi.ac.uk/pride/data/archive/2019/01/PXD009072/)          
 * E<sub>2</sub> = [PXD015890](https://ftp.pride.ebi.ac.uk/pride/data/archive/2019/10/PXD015890)           
 * E<sub>3</sub> = [PXD020590](http://ftp.pride.ebi.ac.uk/pride/data/archive/2020/11/PXD020590/)        
-* E<sub>4</sub> = Please download the following datasets from the PRIDE Archive and put all files in the same directory. (PXD007871, 009072, 010023, 012463, 013074, 013332, 014802, and 015391). Each dataset can be accessed at: https://www.ebi.ac.uk/pride/archive/projects/PXD0(number)
+* E<sub>4</sub> = Please download the following datasets from the PRIDE Archive and put all files in the same directory. (PXD007871, 009072, 010023, 012463, 013074, 013332, 014802, and 015391). Each dataset can be accessed at: https://www.ebi.ac.uk/pride/archive/projects/PXD(number)          
+* E<sub>5</sub> = Please download and put all above E<sub>1</sub> to E<sub>4</sub> datasets in the same directory.     
 
 ### Processing Instructions
 Please download the RAW files from the following links and then convert them to MS2, mzML and/or MGF as per requirements. Use the provided [raw2ms2]({{ site.baseurl }}/tools/ms2prep/raw2ms2) too for conversion from any format to MS2. See more [here]({{ site.baseurl }}/tools/ms2prep/raw2ms2). The same tool can be used to convert to other formats. Just change the conversion output file format (currently set to ms2) in *line#62* of the tool as follows:
@@ -40,9 +41,9 @@ Please download all proteins in the FASTA format. The pre-processed human databa
 * [human.tar]({{ site.baseurl }}/assets/dbparts/human.tar)        
 * ***swiss.tar*** Please use the workflow mentioned [here]({{ site.baseurl }}/../getting_started#setup-database) to generate the database parts for HiCOPS. We could not attach it here due to its large size.
 
-## Comparative analysis reveals orders of magnitude speedups
+## Experiments: Comparative Analysis
 
-### Experiment 1
+### <font color=red> Experiment 1</font>
 * Database: swiss      
 * Dataset: Use the file: 7Sep18\_Olson\_WT24 from the dataset: PXD015890       
 * 
@@ -82,7 +83,7 @@ crux tide-search --overwrite T --precursor-window 10.0 --precursor-window-type m
 crux tide-index --parameter-file /path/to/params /path/to/protein/db.fasta /path/to/resultant/index
 ```
 
-### Experiment 2
+### <font color=red> Experiment 2</font>
 * Database: swiss      
 * Dataset: Use the file: 7Sep18\_Olson\_WT24 from the dataset: PXD015890       
 
@@ -108,7 +109,7 @@ crux tide-index --parameter-file /path/to/params /path/to/protein/db.fasta /path
 
 **Note:** Make sure to edit the X!-, X!!-, SW-(Tandem) paths, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
 
-### Experiment 3
+### <font color=red> Experiment 3</font>
 * Database: human      
 * Dataset: PXD015890       
 
@@ -144,21 +145,21 @@ crux tide-index --parameter-file /path/to/params /path/to/protein/db.fasta /path
 
 **Note:** Make sure to edit the Comet path, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
 
-### Experiment 4
+### <font color=red> Experiment 4</font>
 * Database: swiss      
 * Dataset: PXD015890       
 
 #### HiCOPS, MSFragger, X!Tandem, X!!Tandem, SW-Tandem, Crux
 Follow the same steps and configuration files as for [Experiment 1](#experiment-1). Just replace the dataset path to point to the complete dataset: PXD015890 instead of only one file.
 
-### Experiment 5
+### <font color=red> Experiment 5</font>
 * Database: swiss      
 * Dataset: PXD015890       
 
 #### HiCOPS, MSFragger
 Follow the same steps and configuration files as for [Experiment 2](#experiment-2). Just replace the dataset path to point to the complete dataset: PXD015890 instead of only one file.
 
-### Experiment 6
+### <font color=red> Experiment 6</font>
 * Database: human      
 * Dataset: Use the dataset: E<sub>4</sub>       
 
@@ -182,3 +183,159 @@ Follow the same steps and configuration files as for [Experiment 2](#experiment-
 * Use this SLURM script: [comet.slurm]({{ site.baseurl }}/assets/config_comet/comet.slurm)             
 
 **Note:** Make sure to edit the Comet path, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
+
+
+## Experiments: HiCOPS Performance Analysis
+
+### Generic Workflow 
+* Build HiCOPS with Timemory support to enable instrumentation. See [this] to enable Timemory support.     
+* Use the parameter files provided for each experiment to run the experiments.      
+* Use the [hicops_comet]({{ site.baseurl }}/tools/runtime/hicops_comet) or [hicops_config]({{ site.baseurl }}/tools/runtime/hicops_config) tool depending on your system to generate the uparams.txt file.      
+* Use this SLURM script: [hicops.slurm]({{ site.baseurl }}/assets/config_hicops/hicops.slurm) to run HiCOPS.       
+
+**Note:** Make sure to edit the HiCOPS path, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
+
+#### <font color=red> Experiment 1 </font>
+* Database: human
+* Dataset: PXD009072
+* Use this paramters file: [pe1.txt]({{ site.baseurl }}/assets/config_hicops/pe1.txt)      
+
+#### <font color=red>Experiment 2</font>
+* Database: human
+* Dataset: PXD009072
+* Use this paramters file: [pe2.txt]({{ site.baseurl }}/assets/config_hicops/pe2.txt)      
+
+#### <font color=red>Experiment 3</font>
+* Database: human
+* Dataset: PXD015890
+* Use this paramters file: [pe3.txt]({{ site.baseurl }}/assets/config_hicops/pe3.txt)      
+
+#### <font color=red>Experiment 4</font>
+* Database: swiss
+* Dataset: E<sub>4</sub>
+Use this paramters file: [pe4.txt]({{ site.baseurl }}/assets/config_hicops/pe4.txt)      
+
+#### <font color=red>Experiment 5</font>
+* Database: swiss
+* Dataset: E<sub>5</sub>
+Use this paramters file: [pe5.txt]({{ site.baseurl }}/assets/config_hicops/pe5.txt)      
+
+#### <font color=red>Experiment 6</font>
+* Database: human
+* Dataset: PXD015890
+* Use this paramters file: [pe6.txt]({{ site.baseurl }}/assets/config_hicops/pe6.txt)      
+
+#### <font color=red>Experiment 7</font>
+* Database: human
+* Dataset: E<sub>4</sub>
+* Use this paramters file: [pe7.txt]({{ site.baseurl }}/assets/config_hicops/pe7.txt)      
+
+#### <font color=red>Experiment 8</font>
+* Database: human
+* Dataset: PXD020590
+* Use this paramters file: [pe8.txt]({{ site.baseurl }}/assets/config_hicops/pe8.txt)      
+
+#### <font color=red>Experiment 9</font>
+* Database: swiss
+* Dataset: PXD015890
+* Use this paramters file: [pe9.txt]({{ site.baseurl }}/assets/config_hicops/pe9.txt)      
+
+#### <font color=red>Experiment 10</font>
+* Database: swiss
+* Dataset: PXD015890
+* Use this paramters file: [pe10.txt]({{ site.baseurl }}/assets/config_hicops/pe10.txt)      
+
+#### <font color=red>Experiment 11</font>
+* Database: human
+* Dataset: E<sub>4</sub>
+* Use this paramters file: [pe11.txt]({{ site.baseurl }}/assets/config_hicops/pe11.txt)      
+
+#### <font color=red>Experiment 12</font>
+* Database: human
+* Dataset: PXD009072
+* Use this paramters file: [pe12.txt]({{ site.baseurl }}/assets/config_hicops/pe12.txt)      
+
+## Experiments: Tera Scale Peptide Identification
+
+### <font color=red> Experiment 1 </font>
+* Database: human
+* Dataset: PXD015890
+
+#### HiCOPS
+* Use this parameter file [le1]({{ site.baseurl }}/assets/config_hicops/le1.txt)
+* Use the [hicops_comet]({{ site.baseurl }}/tools/runtime/hicops_comet) or [hicops_config]({{ site.baseurl }}/tools/runtime/hicops_config) tool depending on your system to generate the uparams.txt file.      
+* Use this SLURM script: [hicops.slurm]({{ site.baseurl }}/assets/config_hicops/hicops.slurm) to run HiCOPS.       
+
+**Note:** Make sure to edit the HiCOPS path, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
+
+#### MSFragger
+* Use this paramters file: [le1.params]({{ site.baseurl }}/assets/config_msf/le1.params)      
+* Run this python script [mspartition.py]({{ site.baseurl }}/assets/expt_tools/mspartition.py) to create N random partitions of the experimental dataset: `python3.7 mspartition.py -i <path to dataset> -N <partitions>`     
+* Use this SLURM script: [msfragger.slurm]({{ site.baseurl }}/assets/config_msf/msfragger.slurm) to run experiment on each partition of the dataset.     
+
+**Note:** Make sure to edit the MSFragger path, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
+
+### <font color=red> Experiment 3 </font>
+* Database: human
+* Dataset: PXD020590
+
+#### HiCOPS
+* Use this parameter file [le3.txt]({{ site.baseurl }}/assets/config_hicops/le3.txt)
+* Use the [hicops_comet]({{ site.baseurl }}/tools/runtime/hicops_comet) or [hicops_config]({{ site.baseurl }}/tools/runtime/hicops_config) tool depending on your system to generate the uparams.txt file.      
+* Use this SLURM script: [hicops.slurm]({{ site.baseurl }}/assets/config_hicops/hicops.slurm) to run HiCOPS.       
+
+**Note:** Make sure to edit the HiCOPS path, output and parameters paths, number of nodes, number of cores per node etc. in the SLURM file.
+
+## Experiments: Correctness of search algorithm
+
+### <font color=red> Experiment 3 </font>
+* Database: swiss
+* Dataset: PXD015890
+
+#### HiCOPS
+* Use this parameters file: [ce3.txt]({{ site.baseurl }}/assets/config_hicops/ce3.txt)
+* Run [hicops_config]({{ site.baseurl }}/tools/runtime/hicops_config) to generate the uparams.txt as follows:
+
+```bash
+/hicops/install/bin/tools/hicops_config ./ce3.txt
+```
+
+* Run HiCOPS
+
+```bash
+/hicops/install/bin/hicops ./uparams.txt ; /hicops/install/bin/tools/psm2tsv -i /path/to/workspace/output
+```
+
+#### MSFragger
+* Use this parameters file:[ce3.params]({{ site.baseurl }}/assets/config_msf/ce3.params)
+* Run MSFragger
+
+```bash 
+java -Xmx80G -jar /msfragger/MSFragger-2.4.jar ce3.params /path/to/PXD015890/*.mzML
+```
+
+### <font color=red> Experiment 6 </font>
+* Database: swiss
+* Dataset: PXD015890
+
+#### HiCOPS
+* Use this parameters file: [ce6.txt]({{ site.baseurl }}/assets/config_hicops/ce6.txt)
+* Run [hicops_config]({{ site.baseurl }}/tools/runtime/hicops_config) to generate the uparams.txt as follows:
+
+```bash
+/hicops/install/bin/tools/hicops_config ./ce6.txt
+```
+
+* Run HiCOPS
+
+```bash
+/hicops/install/bin/hicops ./uparams.txt ; /hicops/install/bin/tools/psm2tsv -i /path/to/workspace/output
+```
+
+#### MSFragger
+* Use this parameters file:[ce6.params]({{ site.baseurl }}/assets/config_msf/ce6.params)
+* Run MSFragger
+
+```bash 
+java -Xmx80G -jar /msfragger/MSFragger-2.4.jar ce6.params /path/to/PXD015890/*.mzML
+```

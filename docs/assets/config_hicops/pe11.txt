@@ -1,0 +1,118 @@
+# 
+# HiCOPS for Comet
+# Copyrights(c) 2020 PCDS Laboratory
+# Muhammad Haseeb, and Fahad Saeed
+# School of Computing and Information Sciences
+# Florida International University (FIU), Miami, FL
+# Email: {mhaseeb, fsaeed}@fiu.edu
+# 
+# Auto generated sampleparams.txt
+# Sample parameters generated for HiCOPS (XSEDE COMET) version
+# For more information: https://portal.xsede.org/sdsc-comet
+# 
+# Generated on: 2020-08-30 22:19 
+# 
+
+
+# IMPORTANT: DO NOT put any spaces between variable=value
+# 
+
+# XSEDE (Comet) Username
+username=$USER
+
+# ABSOLUTE Path to Workspace directory
+workspace=/oasis/scratch/comet/mhaseeb/temp_project/workspaces/workspace2
+
+# Job Time: hh:mm:ss (max: 48:00:00)
+jobtime=00:45:00
+
+# Nodes available
+nodes=4
+
+# Cores per machine
+cores=24
+
+# Cores per MPI process
+cores_per_mpi=12
+
+# MPI binding policy: scatter, compact 
+bp=scatter
+
+# MPI binding level: core, socket, numanode
+bl=socket
+
+# Optimize settings? 1/0? Highly Recommended 
+optimize=1
+
+# ABSOLUTE path to processed proteome database parts
+# NOTE: Run the dbprocessor.py to process a FASTA 
+#       proteome database and generate dbparts
+dbparts=/home/mhaseeb/database/human/parts
+
+# ABSOLUTE path to MS/MS dataset
+ms2data=/oasis/scratch/comet/mhaseeb/temp_project/data15G
+
+# Mods to include per peptide sequence
+nmods=4
+
+# Mods Information: AA(max 4) mod_mass mods_per_pep
+mod1=M 15.99 3
+mod2=NQ 0.98 3
+mod3=STY 79.97 2
+mod4=X 0 0
+mod5=X 0 0
+mod6=X 0 0
+mod7=X 0 0
+mod8=X 0 0
+mod9=X 0 0
+mod10=X 0 0
+mod11=X 0 0
+mod12=X 0 0
+mod13=X 0 0
+mod14=X 0 0
+mod15=X 0 0
+
+# Min peptide length
+min_length=7
+
+# Max peptide length
+max_length=40
+
+# Min precursor mass (Da)
+min_prec_mass=500
+
+# Max precursor mass (Da)
+max_prec_mass=5000
+
+# Max fragment charge
+maxz=3
+
+# Min shared peaks
+shp=4
+
+# Required min shared peaks
+min_hits=4
+
+# Base normalized Intensity for MS/MS data 
+base_int=100000
+
+# Cutoff ratio wrt base intensity 
+cutoff_ratio=0.01
+
+# Scratch pad memory for scorecard in MBs (min: 2048MB)
+spadmem=2048
+
+# Resolution (Da)
+res=0.01
+
+# Precursor Mass Tolerance (+-Da): -1 means infinity 
+dM=500.0
+
+# Fragment Mass Tolerance (+-Da)
+dF=0.01
+
+# Top Matches to report
+top_matches=10
+
+# Max expect value to report
+expect_max=20.0
