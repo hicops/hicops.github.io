@@ -10,7 +10,7 @@ plugins:
 page_excerpts: true
 
 # Google Analytics
-google_analytics: G-4VZD1LZZ87
+google_analytics: G-J80X4WSRCW
 
 # main hicops repository url
 main_repository_url: https://github.com/hicops/hicops
