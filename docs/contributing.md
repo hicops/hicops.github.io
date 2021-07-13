@@ -19,5 +19,6 @@ All contributions are welcome including new features, documentation updates and 
 ## Technical Support
 If you want to report a bug or request a feature, please open an [issue](https://github.com/pcdslab/hicops/issues). If reporting a bug, please make sure to include any logs, screenshots and/or helpful observations. Also, do not forget to describe the dataset(s), database, steps performed etc. so that the issue can be reproduced.
 
-## Commercial Use License
-Please acquire a commercial use license from [FIU Technology Transfer Office](http://research.fiu.edu/ored/).
+## Licensing
+This software is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please email at fsaeed@fiu.edu to acquire appropriate licenses
+
