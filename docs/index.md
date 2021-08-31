@@ -3,7 +3,7 @@ title: Welcome
 toc: true
 ---
 
-![build](https://github.com/hicops/hicops/workflows/build/badge.svg) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/hicops/hicops/blob/develop/README.md#contributing) [![pages yes](https://img.shields.io/badge/pages-yes-blue.svg)](https://hicops.github.io) [![GitHub forks](https://img.shields.io/github/forks/hicops/hicops.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/hicops/hicops/network/) [![GitHub stars](https://img.shields.io/github/stars/hicops/hicops.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/hicops/hicops/stargazers/) [![GitHub contributors](https://img.shields.io/github/contributors/hicops/hicops.svg)](https://GitHub.com/hicops/hicops/graphs/contributors/) [![GitHub issues](https://img.shields.io/github/issues/hicops/hicops.svg)](https://GitHub.com/hicops/hicops/issues/) [![Github all releases](https://img.shields.io/github/downloads/hicops/hicops/total.svg)](https://GitHub.com/hicops/hicops/releases/) <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a> [![DOI](https://zenodo.org/badge/301835377.svg)](https://zenodo.org/badge/latestdoi/301835377)
+![build](https://github.com/hicops/hicops/workflows/build/badge.svg) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/hicops/hicops/blob/develop/README.md#contributing) [![pages yes](https://img.shields.io/badge/pages-yes-blue.svg)](https://hicops.github.io) [![GitHub forks](https://img.shields.io/github/forks/hicops/hicops.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/hicops/hicops/network/) [![GitHub stars](https://img.shields.io/github/stars/hicops/hicops.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/hicops/hicops/stargazers/) [![GitHub contributors](https://img.shields.io/github/contributors/hicops/hicops.svg)](https://GitHub.com/hicops/hicops/graphs/contributors/) [![GitHub issues](https://img.shields.io/github/issues/hicops/hicops.svg)](https://GitHub.com/hicops/hicops/issues/) [![Github all releases](https://img.shields.io/github/downloads/hicops/hicops/total.svg)](https://GitHub.com/hicops/hicops/releases/) <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a> [![DOI paper](https://img.shields.io/badge/NatCompSci-10.1038/s43588.021.00113.z-9b0606.svg)](https://doi.org/10.1038/s43588-021-00113-z)  [![Zenodo](https://zenodo.org/badge/301835377.svg)](https://zenodo.org/badge/latestdoi/301835377)
 
 # About
 
@@ -15,9 +15,9 @@ HiCOPS has been implemented using C++17, Python 3.7 and Bash. A high-level graph
 
 ## Citation
 
-Learn about research work in detail in the published research work given as follows. You can access the paper via [SharedIt](https://rdcu.be/cvFan)
+Learn about research work in detail in the published research work given as follows. You can access the paper via [SharedIt](https://rdcu.be/cvFan).
 
-> *Haseeb, M., Saeed, F. High performance computing framework for tera-scale database search of mass spectrometry data. Nat Comput Sci 1, 550–561 (2021). https://doi.org/10.1038/s43588-021-00113-z*
+> <span style="color:black">Haseeb, Muhammad, and Fahad Saeed. *"High performance computing framework for tera-scale database search of mass spectrometry data."* Nature Computational Science, Volume no. 1, Issue no. 8 (2021): pp no. 550-561.</span> [https://doi.org/10.1038/s43588-021-00113-z](https://doi.org/10.1038/s43588-021-00113-z)
 
 Please cite our paper if you use our work. Thank you. 
 
