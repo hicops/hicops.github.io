@@ -17,7 +17,7 @@ HiCOPS has been implemented using C++17, Python 3.7 and Bash. A high-level graph
 
 Learn about research work in detail in the published research work given as follows. You can access the paper via [SharedIt](https://rdcu.be/cvFan)
 
-***Haseeb, M., Saeed, F. High performance computing framework for tera-scale database search of mass spectrometry data. Nat Comput Sci 1, 550–561 (2021). https://doi.org/10.1038/s43588-021-00113-z***
+> *Haseeb, M., Saeed, F. High performance computing framework for tera-scale database search of mass spectrometry data. Nat Comput Sci 1, 550–561 (2021). https://doi.org/10.1038/s43588-021-00113-z*
 
 Please cite our paper if you use our work. Thank you. 
 
