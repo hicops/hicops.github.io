@@ -13,8 +13,13 @@ HiCOPS has been implemented using C++17, Python 3.7 and Bash. A high-level graph
 
 ![Graphical Abstract]({{ site.baseurl }}/assets/grabs.jpg){: .align-center height="475" }
 
-## Research Work
-Please read the following research paper for the introduction to our research, parallel design and other concepts behind HiCOPS. A pre-print of our paper is available [here](). Please cite us if you use our work. Thank you.
+## Citation
+
+Learn about research work in detail in the published research work given as follows. You can access the paper via [SharedIt](https://rdcu.be/cvFan)
+
+***Haseeb, M., Saeed, F. High performance computing framework for tera-scale database search of mass spectrometry data. Nat Comput Sci 1, 550–561 (2021). https://doi.org/10.1038/s43588-021-00113-z***
+
+Please cite our paper if you use our work. Thank you. 
 
 ## Application
 Computational Proteomics researchers and developers can integrate their algorithms within the HiCOPS framework. Integration is as simple as implementing conventional (shared-memory) versions of database indexing, filtering, peptide-to-spectrum scoring, post-processing etc. algorithms within HiCOPS.
