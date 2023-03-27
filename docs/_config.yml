@@ -13,6 +13,6 @@ page_excerpts: true
 google_analytics: UA-199714067-1
 
 # main hicops repository url
-main_repository_url: https://github.com/hicops/hicops
+main_repository_url: https://github.com/pcdslab/gicops
 
 # show_downloads: true
